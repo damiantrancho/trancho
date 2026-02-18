@@ -66,4 +66,10 @@ app.add_handler(CommandHandler("report", report))
 app.add_handler(CallbackQueryHandler(botones))
 
 print("🟢 Radar MeGaHunter Lanzarote ACTIVO")
-app.run_polling()
+app.run_polling(
+        poll_interval=2.0,    
+        timeout=30,           
+        read_latency=30,       
+        bootstrap_retries=-1
+)
+

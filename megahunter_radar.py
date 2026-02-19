@@ -3,6 +3,13 @@ CANAL_ID = "-1003845355658"
 
 # ZONA FIJA
 ZONA_PERMITIDA = "lanzarote"
+import time
+
+# Guardamos reportes con tiempo
+reportes_guardados = {}
+
+# Tiempo de bloqueo (30 minutos)
+TIEMPO_BLOQUEO = 1800
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
     ApplicationBuilder,
